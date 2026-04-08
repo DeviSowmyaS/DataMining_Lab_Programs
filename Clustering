@@ -1,0 +1,73 @@
+Demonstrate clustering process on given dataset using simple k- means
+Aim: To demonstrate the clustering process on a dataset using the K-Means algorithm in WEKA and group
+similar data instances into clusters.
+Tools:
+Software: Weka (Waikato Environment for Knowledge Analysis).
+Operating System: Windows / Linux
+ Algorithm Used: K-Means Clustering (SimpleKMeans in WEKA)
+Dataset Used:
+ The dataset used is “soybean.arff” taken from the data repository of WEKA.
+ The Soybean Dataset contains information about soybean plant diseases and their symptoms. Each
+record represents a soybean plant observation with different conditions.
+ This dataset is commonly used to apply machine learning algorithms such as SimpleKMeans, Decision
+Trees (J48/ID3), and Naïve Bayes. In this experiment, it is used to perform clustering using
+SimpleKMeans with 4 clusters and Manhattan distance.
+Date: Roll No.:
+Data Mining Page No.: 44
+Procedure:
+Step 1: Start WEKA
+ Open the WEKA tool.
+ Click on Explorer.
+Step 2: Load the Dataset
+ Go to the Preprocess tab.
+ Click Open File.
+ Select the dataset soybean.arff.
+ Click Open.
+Step 3: Verify Dataset
+ Check that all instances and attributes are loaded correctly.
+ Observe dataset information in the Preprocess panel.
+Date: Roll No.:
+Data Mining Page No.: 45
+Step 4: Move to Cluster Tab
+ Click on the Cluster tab.
+Step 5: Choose Clustering Algorithm
+ Click Choose.
+ Select SimpleKMeans.
+
+Step 6: Set Algorithm Parameters
+ Set Number of Clusters (K) = 4.
+ Set Distance Function = Manhattan Distance.
+
+Date: Roll No.:
+Data Mining Page No.: 46
+Step 7: Set Cluster Mode
+ Under Cluster mode, select Use training set.
+ From the available options, select Use training set.
+ This option tells WEKA to perform clustering using the same dataset that was loaded earlier.
+Step 8: Run the Algorithm
+ Click Start.
+ Wait for WEKA to process the dataset.
+Step 9: Viewing the Results
+After execution, WEKA displays the clustering results including:
+ Clustering model
+Date: Roll No.:
+Data Mining Page No.: 47
+ Cluster centroids
+
+ Number of instances and cluster distribution
+Step 10: Visualizing Cluster
+ Use the Visualize Cluster Assignments option to view the graphical representation of clusters.
+ Observe how the dataset instances are grouped into four clusters based on Manhattan distance.
+Date: Roll No.:
+Data Mining Page No.: 48
+Conclusion:
+The clustering experiment was successfully performed using the SimpleKMeans algorithm in WEKA. The
+soybean dataset, which contains information about different soybean plant conditions and diseases, was used
+for this experiment. The algorithm grouped the 683 instances into 4 clusters using the Manhattan distance
+measure based on the similarity among attribute values. The clustering results showed the cluster centroids,
+number of instances in each cluster, and cluster distribution, which helped in understanding how the data was
+organized into meaningful groups.Thus, the experiment demonstrates that K-Means clustering is an effective
+unsupervised learning technique for identifying patterns and grouping similar data instances in a dataset.
+CO Mapped: CO5
+POs Mapped: PO1, PO2, PO3, PO5, PO8, PO9, PO11
+PSOs Mapped: PSO2
