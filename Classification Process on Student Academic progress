@@ -1,0 +1,81 @@
+Demonstrate classification rule process on Student's Academic Performance Data using j48
+algorithm.
+Aim: To demonstrate the classification rule process on Student’s Academic Performance Data using the J48
+algorithm in WEKA.
+Tool Used:
+WEKA Data Mining Tool.
+Dataset Used:
+The dataset used in this experiment is Student Academic Performance Data. It contains records of students with
+attributes that influence their final academic outcome.
+This dataset is designed to analyze how factors like attendance, internal marks, assignment submission, and
+study hours affect the final performance of students.
+Attributes in the Dataset
+1. Attendance – Percentage of classes attended by the student.
+2. Internal Marks – Marks obtained in internal examinations.
+3. Assignment Submission – Percentage of assignments submitted.
+4. Study Hours – Number of hours spent studying per week.
+5. Final Performance – Overall result of the student (Excellent, Good, Average, Poor). (Class attribut
+Date: Roll No.:
+Data Mining Page No.: 31
+Procedure:
+Step 1: Start WEKA
+ Open WEKA Tool
+ Click on Explore
+Step 2: Load the Dataset
+ Go to Preprocess tab
+ Click Open file
+ Select your file: studentacademicperformance.arff
+ Click Open
+Step 3: Verify Attributes
+ Ensure all attributes are visible:
+o attendance
+o internal marks
+o assignment
+o study hours
+o performance
+Date: Roll No.:
+Data Mining Page No.: 32
+Step 4: Set Class Attribute
+ Click on performance
+ At the bottom, set it as Class attribute
+Step 5: Move to Classify Tab
+ Click on Classify
+Step 6: Choose J48 Algorithm
+ Click on Choose
+ Select: trees → J48
+Step 7: Set Test Option
+ Under Test options
+ Select Use training set
+Step 8: Run the Algorithm
+ Click Start
+ Wait for WEKA to process.
+Date: Roll No.:
+Data Mining Page No.: 33
+Step 9: Observe Output
+ WEKA displays:
+o Decision Tree
+o Number of leaves
+o Accuracy
+o Confusion Matrix
+Decision tree structure
+
+Date: Roll No.:
+Data Mining Page No.: 34
+Step 10: Derive Classification Rules
+ Here are the classification rules derived from the J48 decision tree for your dataset:
+1. IF attendance = high
+THEN performance = Excellent
+2. IF attendance = medium AND assignment = yes
+THEN performance = Good
+3. IF attendance = medium AND assignment = no
+THEN performance = Average
+4. IF attendance = low
+THEN performance = Poor
+Conclusion:
+The J48 algorithm was successfully applied in WEKA to classify student academic performance using
+attributes such as attendance, internal marks, assignment submission, and study hours. The algorithm
+generated a clear decision tree and meaningful IF–THEN classification rules that show how these academic
+factors influence the final performance of students.
+CO Mapped: CO3
+POs Mapped: PO1, PO2, PO3, PO5, PO8, PO9, PO11
+PSOs Mapped: PSO2
