@@ -1,0 +1,57 @@
+Aim: To apply preprocessing techniques on the Weather dataset using WEKA before classification.
+Tool Used:
+WEKA Data Mining Tool
+Dataset Used:
+File name: weather_preprocessed .csv
+Number of records: 5,33,312
+Number of attributes: 8
+Attributes present in the dataset:
+1. Pressure
+2. global_radiation
+3. temp_mean(c)
+4. temp_min(c)
+5. temp_max(c)
+6. Wind_Speed
+7. Wind_Bearing
+8. normalized_label (Class label)
+Procedure:
+Apply Preprocessing for Training Dataset (Weather Data)
+Step 1: Open Weka
+ Launch the Weka Tool.
+ Click Explorer from the Weka GUI.
+
+Step 2: Load the Weather Dataset
+ Go to the Preprocess tab.
+ Click Open File.
+ Select the dataset weather_preprocessed.csv
+ Click Open.
+
+Step 3: Apply Preprocessing Filters
+Remove Filter
+ Used to remove unnecessary attributes.
+ Click Choose under the Filter option.
+ Select
+unsupervised → attribute → Remove
+ Enter the attribute index to remove .
+
+ Click OK.
+ Click Apply.
+Replace Missing Values
+Used to handle missing data.
+Steps:
+ Click Choose again.
+ Select
+unsupervised → attribute → ReplaceMissingValues
+Normalize / Standardize
+Used to adjust numeric values.
+Steps:
+ Click Choose.
+ Select
+unsupervised → attribute → Normalize
+or
+unsupervised → attribute → Standardize
+\Step 4: Save the Preprocessed Dataset
+ Click Save in the Preprocess tab.
+ Enter the file name: weather_preprocessed.arff .
+ Click Save
+ Click Apply
