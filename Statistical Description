@@ -1,0 +1,41 @@
+Aim: To apply statistical descriptions and measures of similarity and dissimilarity on the given student academic
+performance data.
+Tool Used:
+WEKA Data Mining Tool
+Dataset Used – Iris Dataset:
+The Iris dataset is a built-in dataset available in WEKA. It contains 150 instances of iris flowers with numeric
+measurements of sepals and petals.
+Attributes
+1. Sepal Length (numeric)
+2. Sepal Width (numeric)
+3. Petal Length (numeric)
+4. Petal Width (numeric)
+5. Class (Iris-setosa, Iris-versicolor, Iris-virginica)
+This dataset is suitable because all attributes are numeric, which helps in calculating statistical measures and
+distance-based similarity.
+Procedure:
+Step 1: Open WEKA
+ Double click on WEKA Tool
+ Click on Explorer
+Step 2: Load the Iris Dataset
+ Go to Preprocess tab
+ Click Open file
+ Navigate to: WEKA → data → iris.arff
+ Click Open
+ The dataset with 150 instances and 5 attributes will be loaded
+
+Step 3: Observe Dataset Information
+In the Preprocess tab, observe:
+ Relation name: iris
+ Number of instances: 150
+ Number of attributes: 5
+
+Step 4: Apply Statistical Description
+Select each numeric attribute one by one:
+(a) Sepal Length
+ Click sepal length
+ Note: Minimum, Maximum, Mean, Standard Deviation
+
+(b) Sepal Width
+ Click sepal width
+ Note the statistical values
