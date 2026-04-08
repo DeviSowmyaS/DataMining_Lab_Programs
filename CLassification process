@@ -1,0 +1,60 @@
+Aim: To construct a decision tree and derive classification rules from a dataset using the ID3 algorithm with the
+help of the Weka tool.
+Tools:
+Weka (Waikato Environment for Knowledge Analysis).
+Dataset Used:
+The dataset used is “weather.nominal.arff ” taken from the Weka data repository.
+This dataset contains categorical attributes suitable for applying the ID3 algorithm.
+Attributes in Dataset
+ outlook
+ temperature
+ humidity
+ windy
+ play (class attribute)
+Date: Roll No.:
+Data Mining Page No.: 27
+Procedure:
+Step 1: Open Weka Tool
+ Double click on Weka icon.
+ Weka GUI Chooser window opens.
+ Click on Explorer.
+Step 2: Load the Dataset
+ In Explorer, you will be in Preprocess tab
+ Click on Open file
+ Go to the folder: data
+ Select the file weather.nominal.arff
+ Click Open
+Step 3: Observe the Dataset
+ After loading, you can see:
+o Relation name: weather
+o Number of attributes: 5
+o Number of instances: 14
+ In the attributes list, select play
+ Set play as the Class attribute.
+Date: Roll No.:
+Data Mining Page No.: 28
+Step 4: Go to Classify Tab
+ Click on the Classify tab at the top.
+Step 5: Choose ID3 Algorithm (J48)
+ Click on Choose button
+ Select: trees → J48
+ J48 will appear near the Choose button.
+Step 6: Observe the Output
+ In the result box, you will see:
+o Number of correctly classified instances
+o Summary of the model
+Date: Roll No.:
+Data Mining Page No.: 29
+ Decision tree structure
+Classification Rules (Derived from J48 Decision Tree)
+ If outlook = sunny AND humidity = high → play = no
+ If outlook = sunny AND humidity = normal → play = yes
+ If outlook = overcast → play = yes
+ If outlook = rainy AND windy = TRUE → play = no
+ If outlook = rainy AND windy = FALSE → play = yes
+Conclusion:
+The classification rule process was successfully demonstrated on the given dataset using the ID3/J48 algorithm
+in WEKA. A pruned decision tree was generated, and clear rules were derived to predict the target attribute
+(play) based on weather conditions (outlook, humidity, and windy).
+CO Mapped: CO3
+POs Mapped: PO1, P
