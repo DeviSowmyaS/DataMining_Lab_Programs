@@ -1,0 +1,56 @@
+Demonstrate Association rule generation on credit card data using apriori algorithm.
+Aim: To generate association rules from a transaction dataset using the Apriori algorithm in WEKA
+and identify relationships among items frequently purchased together.
+Tools Used:
+ WEKA (Waikato Environment for Knowledge Analysis)
+ Supermarket dataset (built-in transaction dataset in WEKA)
+Dataset Used:
+ Supermarket.arff, included in WEKA installation.
+ Each row represents a transaction, and columns represent items purchased
+ (nominal attributes: true/false).
+Date: Roll No.:
+ Data Mining Page No.: 36
+Procedure:
+Step 1: Load Dataset
+1. Open WEKA Explorer.
+2. Go to the Preprocess tab.
+3. Click Open file and select supermarket.arff.
+Step 2: Set Up Apriori Algorithm
+1. Switch to the Associate tab.
+2. Select the Apriori algorithm.
+3. Configure parameters:
+o Minimum Support: 0.1 (10%)
+o Minimum Confidence: 0.6 (60%)
+o Number of Rules: 10
+
+Date: Roll No.:
+ Data Mining Page No.: 37
+Step 3: Run Apriori Algorithm
+1. Click Start to execute the algorithm and generate association rules.
+2. WEKA will display frequent itemsets along with their support and confidence values.
+3. The top rules are automatically ranked based on confidence.
+
+Step 4: Analyze Rules
+1. Observe the frequent itemsets and rules in the Result Panel.
+2. Each rule shows:
+o Support: Frequency of the itemset in the dataset.
+o Confidence: Likelihood of the consequent given the antecedent.
+3. Identify the strongest rules with high support and confidence for practical insights.
+4. Compare rules to detect unexpected patterns that may reveal new business opportunities.
+Step 5: Interpretation
+1. The rules reveal patterns of items bought together.
+2. Useful for cross-selling, promotions, and marketing strategies.
+3. Helps in planning store layout by placing frequently bought items nearby.
+4. Can be used to design combo offers and discounts to increase sales and customer satisfaction.
+Date: Roll No.:
+ Data Mining Page No.: 38
+Conclusion:
+The Apriori algorithm in WEKA successfully generates association rules from the transaction
+dataset, identifying frequent item combinations and relationships among items purchased together.
+Using the Supermarket dataset, which simulates credit card transactions, we can observe patterns in
+customer purchasing behavior. These association rules provide valuable insights for business
+decisions such as product placement, cross-selling, and targeted marketing strategies. WEKA makes
+it easy to mine, visualize, and interpret these rules efficiently, demonstrating the practical application
+of association rule mining in real-world transactional data.
+CO Mapped: CO4
+POs Mapped: PO1, P
