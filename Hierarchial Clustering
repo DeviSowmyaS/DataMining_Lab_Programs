@@ -1,0 +1,67 @@
+Aim: To apply the Hierarchical clustering algorithm on a dataset and analyze how the data instances are grouped
+based on similarity using WEKA.
+Tool Used:
+Software: Weka (Waikato Environment for Knowledge Analysis).
+Operating System: Windows / Linux
+ Algorithm Used: K-Means Clustering (SimpleKMeans in WEKA)
+Dataset Used:
+The dataset used is glass.arff from the WEKA data repository.
+The Glass Dataset contains chemical composition data of different types of glass. Each instance represents a
+glass sample with attributes such as refractive index and concentrations of elements like sodium, magnesium,
+aluminum, silicon, potassium, calcium, barium, and iron.
+The dataset contains 214 instances and 10 attributes, making it suitable for clustering experiments. It is
+commonly used to analyze and group glass samples based on their chemical properties.
+Date: Roll No.:
+Data Mining Page No.: 50
+Procedure:
+Step 1: Start WEKA
+ Open WEKA Tool
+ Click on Explore
+Step 2: Load the Dataset
+ Go to the Preprocess tab.
+ Click Open File.
+ Select the dataset glass.arff.
+ Click Open.
+ Step 3: Verify Dataset
+ Check that all instances and attributes are loaded correctly.
+ Observe the dataset information displayed in the Preprocess panel.
+Date: Roll No.:
+Data Mining Page No.: 51
+Step 4: Move to Cluster Tab
+ Click on the Cluster tab.
+Step 5: Choose Clustering Algorithm
+ Click Choose.
+ Select HierarchicalClusterer.
+Step 6: Set Algorithm Parameters
+Open the HierarchicalClusterer settings and configure:
+ Number of Clusters = 3 (or any suitable number)
+ Link Type = Average
+Date: Roll No.:
+Data Mining Page No.: 52
+Step 7: Set Cluster Mode
+ Under Cluster mode, select Use training set.
+ This option allows WEKA to perform clustering using the loaded dataset.
+Step 8: Run the Algorithm
+ Click Start.
+ Wait for WEKA to process the dataset.
+Step 9: Observe Output
+WEKA displays the clustering results including:
+ Hierarchical cluster tree structure
+ Cluster assignments
+ Cluster distribution
+Date: Roll No.:
+Data Mining Page No.: 53
+Step 10: Analyze the Clusters
+ Analyze how the glass samples are grouped into clusters based on similarities in their
+chemical composition.
+Conclusion :
+The hierarchical clustering experiment was successfully performed using the HierarchicalClusterer algorithm in
+WEKA. The Glass Dataset was used for this experiment, which contains information about the chemical
+composition of different glass samples.The algorithm grouped similar glass samples based on their attribute
+similarities and formed clusters in a hierarchical tree structure. This method helped in understanding the
+relationships among the data instances by progressively merging similar clusters.Thus, the experiment
+demonstrates that Hierarchical Clustering is an effective unsupervised learning technique for discovering
+patterns and grouping similar data points in a dataset.
+CO Mapped: CO5
+POs Mapped: PO1, PO2, PO3, PO5, PO8, PO9, PO11
+PSOs Mapped: PSO2
