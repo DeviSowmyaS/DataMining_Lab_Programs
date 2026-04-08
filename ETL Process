@@ -1,0 +1,107 @@
+Aim: To study and explain the ETL (Extract, Transform, Load) process and understand its importance in moving
+and preparing data for a Data Warehouse.
+Introduction
+In a data warehousing environment, data is collected from multiple heterogeneous sources such as databases,
+files, and applications. Since this data originates from different systems, it is often inconsistent, incomplete, and
+stored in various formats. Before this data can be used effectively for analysis and decision-making, it must be
+properly processed, cleaned, and standardized prior to being stored in the data warehouse.
+What is ETL?
+ETL stands for Extract, Transform, and Load. It is a systematic process used in data warehousing to extract data
+from various source systems, transform the extracted data into a consistent and suitable format, and finally load
+the processed data into a data warehouse for analysis and decision-making purposes.
+Stages of ETL Process
+1. Extract
+ Extract Stage is the first step in ETL where data is read from multiple source systems such as:
+ Databases (using SQL/JDBC connections)
+ Flat files like CSV/TXT (read_csv())
+ Excel files (read_excel())
+ Applications or web systems via APIs
+ Transactional/operational systems
+The data pulled from all these locations is stored in a staging area (DataFrame or temp DB) for further
+processing.
+Types implemented in code:
+ Full Extraction: scripts that read the entire file/table directly with pd.read_csv() or pd.read_sql().
+ Incremental Extraction: code that filters only new records by comparing IDs between old and new
+datasets.
+ Purpose achieved by the code:
+ Gathers heterogeneous raw data into one structure.
+ Prepares a common staging dataset for the Transform and Load stages.
+2. Transform
+The transformation codes implement key activities such as drop_duplicates() to remove duplicate records,
+fillna() to handle missing/null values, and string functions to correct inconsistent text data.
+They use astype() and to_datetime() for data type conversion and formatting logic to standardize dates and
+numeric fields.
+Business filters in the code represent application of business rules (e.g., keeping only completed transactions).
+groupby().sum()/mean()/count() performs aggregation, matching analytical preparation.
+Purpose achieved by the code:
+ Improves overall data quality,
+ Ensures consistency and accuracy,
+ Produces a clean dataset suitable for data-warehouse analytics and BI reporting.
+3. Load
+Loading is the final stage of the ETL process. In this stage, the transformed data is stored in the data warehouse.
+Types of Loading:
+ Full Load: Entire transformed data is loaded.
+ Incremental Load: Only new or updated data is loaded.
+Data is Loaded Into:
+ Fact tables
+ Dimension tables
+Purpose of Loading:
+ To make data available for reporting, analysis, and decision-making.
+Importance of ETL in Data Warehouse
+ Integrates data from multiple heterogeneous sources
+ Improves data accuracy and consistency
+ Enhances data quality
+ Reduces redundancy and errors
+ Enables efficient querying and reporting
+ Supports business intelligence and data mining
+Procedure:
+Step 1: Install and Open Weka
+ Download and install the Weka tool on your system.
+ Open the application.
+ Click on Explorer from the Weka GUI.
+Step 2: Extract Data (Loading Dataset)
+ In the Explorer window, select the Preprocess tab.
+ Click Open File.
+ Choose the dataset file (CSV or ARFF format).
+ The dataset will be loaded and displayed with attributes and instances.
+ This step represents the Extract phase, where data is taken from a source file.
+Step 3: Transform Data (Preprocessing)
+In the Preprocess tab, select Choose Filter.
+Apply filters such as:
+Apply Remove Filter (Remove Unnecessary Attributes)
+ Click Choose.
+ Select the following path
+ unsupervised → attribute → Remove
+ Click on Remove.
+ Enter the attribute index number you want to remove (example: 2).
+ Click OK.
+ Click Apply.
+ The selected attribute will be removed from the dataset.
+Apply ReplaceMissingValues Filter
+ Click Choose again.
+ Select:
+ unsupervised → attribute → ReplaceMissingValues
+ Click ReplaceMissingValues.
+ Click Apply.
+ Weka will automatically replace missing values in the dataset.
+Apply Normalize or Standardize Filter
+ Click Choose again.
+ Select:
+unsupervised → attribute → Standardize / Normalize Filter
+ Click the selected filter.
+ Click Apply.
+ This adjusts the data values into a standard range
+Step 4: Load Data (Save Processed Dataset)
+ After preprocessing, click Save in the Preprocess tab.
+ Save the transformed dataset in ARFF or CSV format.
+ The processed data can now be used for data analysis or machine learning tasks.
+ This step represents the Load phase, where the cleaned data is stored for further use.
+Conclusion:
+Using the Weka tool, the ETL (Extract, Transform, Load) process was carried out on the dataset. The
+data was first extracted by importing it into Weka, then transformed using preprocessing techniques
+such as filtering and handling missing values, and finally loaded by saving the processed dataset.
+This process helps in cleaning, organizing, and preparing data for further analysis and data mining
+tasks, making the data more accurate and useful for decision-making.
+CO Mapped: CO1
+POs Mapped: PO1, PO2, PO3, PO5, PO8, PO9, PO11
+PSOs Mapped: PSO2 
